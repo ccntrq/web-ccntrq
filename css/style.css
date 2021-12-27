@@ -1,0 +1,65 @@
+:root {
+  --blue: #3673a9;
+  --black: #0f0e17;
+  --white: #fffffe;
+  --grey: #a7a9be;
+  --text-dark: var(--black);
+  --text-light: var(--white);
+  --text-medium: var(--grey);
+  --background-main: var(--white);
+  --background-sidebar: var(--black);
+  --accent: var(--blue);
+}
+
+* {
+  font-family: "Lucida Sans", sans-serif;
+  color: var(--text-dark);
+}
+
+html,
+body {
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-bottom: 0.5rem;
+}
+
+code {
+  font-family: monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: var(--accent);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* TODO: darken */
+a:visited {
+  color: var(--accent);
+}

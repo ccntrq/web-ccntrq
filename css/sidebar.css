@@ -1,0 +1,39 @@
+.sidebar-content {
+  color: var(--text-medium);
+  font-size: 1rem;
+}
+
+.sidebar-content a {
+  color: var(--text-light);
+}
+
+.sidebar-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.sidebar-content h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+.sidebar-info {
+  color: inherit;
+}
+
+.sidebar-nav {
+  padding-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.sidebar-links {
+  padding-top: 1rem;
+}
+
+.sidebar-external-link-logo {
+  width: 2rem;
+  height: 2rem;
+}
