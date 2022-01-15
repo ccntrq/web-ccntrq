@@ -40,6 +40,13 @@ body {
   padding: 1rem;
 }
 
+@media (max-width: 48em) {
+  .footer {
+    position: relative;
+    top: 100%;
+    transform: translateY(-100%);
+  }
+}
 @media (min-width: 48em) {
   body {
     overflow: hidden;
