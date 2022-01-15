@@ -65,16 +65,25 @@ body {
     padding-bottom: 1rem;
   }
 }
-@media (min-width: 85em) {
+@media (min-width: 85em) and (min-height: 30em) {
   html {
     font-size: 20px;
   }
 }
 
-@media (min-height: 26em) and (min-width: 48em) and (max-width: 85em) {
+@media (max-height: 24em) {
+  .sidebar-links {
+    display: none;
+  }
+}
+
+@media (min-height: 26em) {
   .sidebar-sticky {
     padding-bottom: 5rem;
   }
+}
+
+@media (min-height: 30em) {
   .main-content {
     padding-top: 4rem;
   }
@@ -83,15 +92,6 @@ body {
 @media (min-width: 72em) and (max-width: 85em) {
   .main-content {
     padding-left: 4rem;
-  }
-}
-
-@media (min-height: 30em) and (min-width: 85em) {
-  .sidebar-sticky {
-    padding-bottom: 5rem;
-  }
-  .main-content {
-    padding-top: 4rem;
   }
 }
 
