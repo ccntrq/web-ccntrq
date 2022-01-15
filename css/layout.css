@@ -10,16 +10,23 @@ body {
 .container {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .main {
-  padding: 1rem;
   background-color: var(--background-main);
   font-size: inherit;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.main-content {
+  padding: 1rem;
 }
 
 .sidebar {
-  grid-area: sidebar;
   background-color: var(--background-sidebar);
 }
 
@@ -34,40 +41,26 @@ body {
 }
 
 .footer {
-  grid-area: footer;
   text-align: center;
   background-color: var(--background-sidebar);
   padding: 1rem;
+  margin-top: auto;
 }
 
-@media (max-width: 48em) {
-  .footer {
-    position: relative;
-    top: 100%;
-    transform: translateY(-100%);
-  }
-}
 @media (min-width: 48em) {
   body {
     overflow: hidden;
   }
   .container {
-    display: grid;
-    grid-template-columns: 18rem 1fr;
-    grid-template-rows: 1fr 5rem;
-    grid-template-areas:
-      "sidebar main"
-      "sidebar footer";
-    gap: 0px 0px;
-    font-size: inherit;
+    flex-direction: row;
   }
   .main {
-    padding-bottom: 0rem;
-    grid-area: main;
-    overflow: scroll;
+    width: calc(100% - 18rem);
+    overflow: auto;
     overflow-x: hidden;
   }
   .sidebar-sticky {
+    width: 18rem;
     text-align: left;
     padding-bottom: 1rem;
   }
@@ -82,13 +75,13 @@ body {
   .sidebar-sticky {
     padding-bottom: 5rem;
   }
-  .main {
+  .main-content {
     padding-top: 4rem;
   }
 }
 
 @media (min-width: 72em) and (max-width: 85em) {
-  .main {
+  .main-content {
     padding-left: 4rem;
   }
 }
@@ -97,13 +90,13 @@ body {
   .sidebar-sticky {
     padding-bottom: 5rem;
   }
-  .main {
+  .main-content {
     padding-top: 4rem;
   }
 }
 
 @media (min-width: 90em) {
-  .main {
+  .main-content {
     padding-left: 4rem;
   }
 }
