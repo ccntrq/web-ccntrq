@@ -7,7 +7,7 @@ import           System.FilePath
 config :: Configuration
 config = defaultConfiguration
     { deployCommand =
-        "rsync -ave \"ssh\" _site/* apajocnb@www.pankoff.net:www.pankoff.net"
+        "rsync -avzP -e \"ssh\" _site/ apajocnb@www.pankoff.net:www.pankoff.net"
     }
 
 
