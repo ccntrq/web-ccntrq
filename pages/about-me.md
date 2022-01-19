@@ -7,6 +7,8 @@ title: About me
     src="./img/me-small.jpg"
     alt="Image of me"
     style="border-radius: 50%;"
+    width="160px"
+    height="160px"
   >
 </div>
 
