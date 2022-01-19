@@ -21,6 +21,10 @@ main = hakyllWith config $ do
         route idRoute
         compile compressCssCompiler
 
+    match "httpd-conf/httpd.conf" $ do
+        route $ constRoute ".htaccess"
+        compile compressCssCompiler
+
     match "pages/*" $ do
 
         route $ customRoute
