@@ -23,7 +23,7 @@ main = hakyllWith config $ do
 
     match "httpd-conf/httpd.conf" $ do
         route $ constRoute ".htaccess"
-        compile compressCssCompiler
+        compile copyFileCompiler
 
     match "pages/*" $ do
 
