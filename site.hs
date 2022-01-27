@@ -13,6 +13,14 @@ config = defaultConfiguration
 
 main :: IO ()
 main = hakyllWith config $ do
+    match "img/me.jpg" $ do
+        route $ setExtension ".webp"
+        compile $ getResourceLBS >>= withItemBody
+            (unixFilterLBS
+                "cwebp"
+                ["-resize", "160", "160", "-q", "90", "-o", "-", "--", "-"]
+            )
+
     match "img/**" $ do
         route idRoute
         compile copyFileCompiler

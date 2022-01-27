@@ -4,7 +4,7 @@ title: About me
 
 <div style="text-align: center">
   <img
-    src="./img/me-small.jpg"
+    src="./img/me.webp"
     alt="Image of me"
     style="border-radius: 50%;"
     width="160px"
