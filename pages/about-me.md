@@ -6,7 +6,7 @@ title: About me
   <img
     src="./img/me.webp"
     alt="Image of me"
-    style="border-radius: 50%;"
+    class="circle-border"
     width="160px"
     height="160px"
   >

@@ -63,3 +63,7 @@ a:hover {
 a:visited {
   color: var(--accent);
 }
+
+.circle-border {
+  border-radius: 50%;
+}
