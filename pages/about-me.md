@@ -2,7 +2,7 @@
 title: About me
 ---
 
-<div style="text-align: center">
+<div class="text-center">
   <img
     src="./img/me.webp"
     alt="Image of me"
