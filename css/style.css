@@ -66,6 +66,10 @@ a:visited {
   color: var(--accent);
 }
 
+strong {
+  font-weight: bold;
+}
+
 .circle-border {
   border-radius: 50%;
 }
