@@ -1,5 +1,6 @@
 :root {
   --blue: #3673a9;
+  --blue-darkened-25: #28567e;
   --black: #0f0e17;
   --white: #fffffe;
   --grey: #a7a9be;
@@ -9,6 +10,7 @@
   --background-main: var(--white);
   --background-sidebar: var(--black);
   --accent: var(--blue);
+  --accent-dark: var(--blue-darkened-25);
 }
 
 * {
@@ -61,9 +63,8 @@ a:hover {
   text-decoration: underline;
 }
 
-/* TODO: darken */
 a:visited {
-  color: var(--accent);
+  color: var(--accent-dark);
 }
 
 strong {
