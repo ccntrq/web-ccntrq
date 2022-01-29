@@ -1,5 +1,6 @@
 .page-content {
   text-align: justify;
+  hyphens: auto;
   max-width: 48rem;
   font-size: 1rem;
 }
