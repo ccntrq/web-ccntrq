@@ -55,5 +55,25 @@ main = hakyllWith config $ do
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
+    create ["sitemap.xml"] $ do
+        route idRoute
+        compile $ do
+            pages <- loadAll "pages/**"
+            let sitemapCtx = listField
+                    "entries"
+                    (constField "host" "https://pankoff.net" <> defaultContext)
+                    (return pages)
+
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/sitemap.xml" sitemapCtx
+                >>= cleanIndexHtmls
 
     match "templates/*" $ compile templateBodyCompiler
+
+
+-- https://github.com/crodjer/rohanjain.in/blob/587d63bd3c9b9afafe3cf55ac5e4de751a5f8289/content/old/hakyll-clean-urls.md
+cleanIndexHtmls :: Item String -> Compiler (Item String)
+cleanIndexHtmls = return . fmap (replaceAll pattern replacement)
+    where
+      pattern = "/index.html"
+      replacement = const "/"
