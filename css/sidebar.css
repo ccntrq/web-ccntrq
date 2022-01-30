@@ -33,6 +33,10 @@
   padding-top: 1rem;
 }
 
+.sidebar-links a:hover {
+  text-decoration: none;
+}
+
 .sidebar-external-link-logo {
   width: 2rem;
   height: 2rem;
