@@ -74,6 +74,6 @@ main = hakyllWith config $ do
 -- https://github.com/crodjer/rohanjain.in/blob/587d63bd3c9b9afafe3cf55ac5e4de751a5f8289/content/old/hakyll-clean-urls.md
 cleanIndexHtmls :: Item String -> Compiler (Item String)
 cleanIndexHtmls = return . fmap (replaceAll pattern replacement)
-    where
-      pattern = "/index.html"
-      replacement = const "/"
+  where
+    pattern     = "/index.html"
+    replacement = const "/"
