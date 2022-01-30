@@ -71,6 +71,10 @@ strong {
   font-weight: bold;
 }
 
+em {
+  font-style: italic;
+}
+
 .circle-border {
   border-radius: 50%;
 }
