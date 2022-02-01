@@ -1,6 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 import           Data.Monoid                    ( mappend )
-import           Hakyll
+import           Data.String                    ( IsString )
+import           Hakyll                  hiding ( host )
 import           System.FilePath
 
 
@@ -10,6 +11,8 @@ config = defaultConfiguration
         "rsync -avzP -e \"ssh\" _site/ apajocnb@www.pankoff.net:www.pankoff.net"
     }
 
+host :: IsString a => a
+host = "https://pankoff.net"
 
 main :: IO ()
 main = hakyllWith config $ do
@@ -59,16 +62,20 @@ main = hakyllWith config $ do
         route idRoute
         compile $ do
             pages <- loadAll "pages/**"
-            let sitemapCtx = listField
-                    "entries"
-                    (constField "host" "https://pankoff.net" <> defaultContext)
-                    (return pages)
+            let sitemapCtx = listField "entries" hostCtx (return pages)
 
             makeItem ""
                 >>= loadAndApplyTemplate "templates/sitemap.xml" sitemapCtx
                 >>= cleanIndexHtmls
 
+    create ["robots.txt"] $ do
+        route idRoute
+        compile $ do
+            makeItem "" >>= loadAndApplyTemplate "templates/robots.txt" hostCtx
     match "templates/*" $ compile templateBodyCompiler
+
+hostCtx :: Context String
+hostCtx = constField "host" host <> defaultContext
 
 
 -- https://github.com/crodjer/rohanjain.in/blob/587d63bd3c9b9afafe3cf55ac5e4de751a5f8289/content/old/hakyll-clean-urls.md
