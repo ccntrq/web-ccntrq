@@ -1,9 +1,9 @@
 {-# LANGUAGE OverloadedStrings #-}
+import qualified Data.ByteString.Lazy          as LBS
 import           Data.Monoid                    ( mappend )
 import           Data.String                    ( IsString )
 import           Hakyll                  hiding ( host )
 import           System.FilePath
-
 
 config :: Configuration
 config = defaultConfiguration
@@ -18,11 +18,7 @@ main :: IO ()
 main = hakyllWith config $ do
     match "img/me.jpg" $ do
         route $ setExtension ".webp"
-        compile $ getResourceLBS >>= withItemBody
-            (unixFilterLBS
-                "cwebp"
-                ["-resize", "160", "160", "-q", "90", "-o", "-", "--", "-"]
-            )
+        compile $ imageWebpCompiler 160 160
 
     match "img/**" $ do
         route idRoute
@@ -84,3 +80,10 @@ cleanIndexHtmls = return . fmap (replaceAll pattern replacement)
   where
     pattern     = "/index.html"
     replacement = const "/"
+
+imageWebpCompiler :: Int -> Int -> Compiler (Item LBS.ByteString)
+imageWebpCompiler width height = getResourceLBS >>= withItemBody
+    (unixFilterLBS
+        "cwebp"
+        ["-resize", show width, show height, "-q", "90", "-o", "-", "--", "-"]
+    )
