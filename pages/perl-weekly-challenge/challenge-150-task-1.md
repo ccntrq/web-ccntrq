@@ -8,10 +8,10 @@ title: "Challenge 150 Task #1 - Fibonacci words"
 
 [Original Description](https://theweeklychallenge.org/blog/perl-weekly-challenge-150/#TASK1)
 
-You are given two strings having same number of digits, $a and $b.
+You are given two strings having the same number of digits, $a and $b.
 
 Write a script to generate Fibonacci Words by concatenation of the previous two
-strings. Finally print 51st digit of the first term having at least 51 digits.
+strings. Finally, print 51st digit of the first term having at least 51 digits.
 
 **Example:**
 
@@ -57,14 +57,14 @@ die "Expect two input words of equal length!\n"
 ```
 
 Now we pass both words to the meat of this solution, the `fibonacci_word`
-routine. We additionaly pass the minimum length of 51 charachters up to which we
-will build the fibonnaci word
+routine. We additionally pass the minimum length of 51 characters, up to which we
+will build the fibonacci word
 
 ```perl
 my $fibonacci_word = fibonacci_word( $a, $b, 51 );
 ```
 
-Finally we extract the 51st charachter (at index 50) from the built word and
+Finally, we extract the 51st character (at index 50) from the built word and
 print it out as our result.
 
 ```perl
@@ -74,11 +74,11 @@ say $target;
 
 The actual `fibonacci_word` routine cries for a recursive solution. As always
 with a recursive approach we start by defining the exit condition, which is
-fullfilled as soon as the `$a` string reaches at least the requested length
-`$length`. In that case ` $a` is the final fibonacci word and we return it to
+fulfilled as soon as the `$a` string reaches at least the requested length
+`$length`. In that case ` $a` is the final fibonacci word, and we return it to
 the caller.
 
-Otherwise we continue the process, by passing `$b` as the new `$a` to the
+Otherwise, we continue the process, by passing `$b` as the new `$a` to the
 fibonacci_word routine and accumulating the next fibonacci word (the
 concatenation of `$a` and ` $b`) into `$b`. This swapping and concatenating of
 the input words goes on until we reach the requested length.
