@@ -75,6 +75,16 @@ em {
   font-style: italic;
 }
 
+pre {
+  margin: 1em 0;
+}
+
+blockquote {
+  left: 1em;
+  padding-left: 1em;
+  border-left: 2px solid var(--text-dark);
+}
+
 .circle-border {
   border-radius: 50%;
 }
