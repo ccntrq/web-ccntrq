@@ -35,7 +35,7 @@ strings. Finally print 51st digit of the first term having at least 51 digits.
 
 ### Solution
 
-[Full Source](https://github.com/ccntrq/perlweeklychallenge-club/tree/challenge-150/challenge-150/alexander-pankoff/perl/ch-1.pl)
+[Full Source](https://github.com/manwar/perlweeklychallenge-club/blob/master/challenge-150/alexander-pankoff/perl/ch-1.pl)
 
 For this challenge we start by getting the two input words `$a` and `$b`
 from the argument list.

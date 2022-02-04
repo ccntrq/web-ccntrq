@@ -27,7 +27,7 @@ The smallest positive square-free integers are
 
 ### Solution
 
-[Full Source](https://github.com/ccntrq/perlweeklychallenge-club/tree/challenge-150/challenge-150/alexander-pankoff/perl/ch-2.pl)
+[Full Source](https://github.com/manwar/perlweeklychallenge-club/blob/master/challenge-150/alexander-pankoff/perl/ch-2.pl)
 
 From the description of the task we learn what we have to do for this challenge:
 
