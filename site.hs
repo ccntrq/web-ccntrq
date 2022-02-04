@@ -40,7 +40,25 @@ main = hakyllWith config $ do
         route $ constRoute ".htaccess"
         compile copyFileCompiler
 
-    match "pages/*" $ do
+    match "pages/perl-weekly-challenge.md" $ do
+        route $ constRoute "pages/perl-weekly-challenge/index.html"
+        compile $ do
+            posts <- loadAll "pages/perl-weekly-challenge/*"
+            let
+                archiveCtx =
+                    listField "challenges"
+                              defaultContext
+                              (return (reverse posts)) -- TODO: implement ordering
+                        `mappend` constField "title" "Archives"
+                        `mappend` defaultContext
+            pandocCompiler
+                >>= loadAndApplyTemplate
+                        "templates/perl-weekly-challenge.html"
+                        archiveCtx
+                >>= loadAndApplyTemplate "templates/default.html" defaultContext
+
+
+    match "pages/**" $ do
 
         route $ customRoute
             (\identifier ->

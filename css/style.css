@@ -92,3 +92,8 @@ blockquote {
 .text-center {
   text-align: center;
 }
+
+.perl-weekly-submission-list {
+  list-style-type: disc;
+  list-style-position: inside;
+}
