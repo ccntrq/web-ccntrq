@@ -13,14 +13,11 @@
   --accent-dark: var(--blue-darkened-25);
 }
 
-* {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
-    helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
-  color: var(--text-dark);
-}
-
 html,
 body {
+  color: var(--text-dark);
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
   line-height: 1.5;
 }
 
@@ -44,11 +41,6 @@ h2,
 h3,
 p {
   margin-bottom: 0.5rem;
-}
-
-code {
-  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
-    monospace;
 }
 
 a {
@@ -78,6 +70,11 @@ em {
 pre {
   margin: 1em 0;
   overflow: auto;
+  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+}
+
+code {
+  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 }
 
 blockquote {
