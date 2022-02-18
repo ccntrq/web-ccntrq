@@ -75,9 +75,8 @@ main = hakyllWith config $ do
     create ["sitemap.xml"] $ do
         route idRoute
         compile $ do
-            pages <- loadAll "pages/**"
+            pages <- loadAll ("pages/**" .&&. (complement "pages/404.md"))
             let sitemapCtx = listField "entries" hostCtx (return pages)
-
             makeItem ""
                 >>= loadAndApplyTemplate "templates/sitemap.xml" sitemapCtx
                 >>= cleanIndexHtmls
