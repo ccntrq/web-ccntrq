@@ -34,7 +34,7 @@ Output: 25
 
 [Full Source](https://github.com/manwar/perlweeklychallenge-club/blob/master/challenge-152/alexander-pankoff/perl/ch-2.pl)
 
-For the second task of this weeks challenge I will follow these steps
+For the second task of this week's challenge I will follow these steps
 
 1. Calculate the area of the two given triangles
 2. Find the corners of the overlapping rectangle
@@ -59,7 +59,7 @@ sub rectangles_area ( $rectangle1, $rectangle2 ) {
 }
 ```
 
-To calculate the area of an rectangle were we know the lower left and upper
+To calculate the area of a rectangle were we know the lower left and upper
 right corner, we first need to calculate the side lengths of the rectangle.
 We find these by calculating the absolute difference of the `x` and `y`
 coordinates of the given corners. With the side lengths in place we multiply
@@ -82,8 +82,9 @@ For the lower left corner coordinates we take the maximum of the `x` and `y`
 components of the lower left corners of the given rectangles. For the upper
 right corner we do the same, using the minimum this time. If one of the
 coordinates of the supposed lower left corner is bigger then the corresponding
-coordinate from the upper right corner, there is no overlap at all and we return
-an empty rectangle in the origin of our plane.
+coordinate from the upper right corner, there is no overlap at all. We return
+an empty rectangle in the origin of our plane. Otherwise, we return the corners
+we just found.
 
 
 ```perl

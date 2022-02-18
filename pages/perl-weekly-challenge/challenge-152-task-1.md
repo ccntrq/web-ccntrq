@@ -48,7 +48,7 @@ Output: 9
 
 [Full Source](https://github.com/manwar/perlweeklychallenge-club/blob/master/challenge-152/alexander-pankoff/perl/ch-1.pl)
 
-On first reading of the current challenge, I thought we had this taks before.
+On first reading of the current challenge, I thought we had this task before.
 After some digging it turns out - not quite.
 In
 [task #2 of challenge 100](https://theweeklychallenge.org/blog/perl-weekly-challenge-100/#TASK2)
@@ -57,7 +57,7 @@ we had the same task with an additional restriction:
 > When you are on index i on the current row then you may move to either index i
 > or index i + 1 on the next row.
 
-I solved this here
+I solved this
 [here](https://github.com/manwar/perlweeklychallenge-club/blob/master/challenge-100/alexander-pankoff/perl/ch-2.pl).
 
 Without this restriction it becomes even easier. We have to calculate the sum of
