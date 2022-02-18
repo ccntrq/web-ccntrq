@@ -101,4 +101,5 @@ blockquote {
 ol[type="1"] {
   list-style-type: decimal;
   padding-left: 2em;
+  margin-bottom: 0.5em;
 }
