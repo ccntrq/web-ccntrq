@@ -1,5 +1,5 @@
 ---
-title: "Challenge 152 Task #1 - Triangle Sum Path"
+title: "Challenge 152 Task #1 - Summing up minimums"
 ---
 
 ## [Task #1] - Triangle Sum Path

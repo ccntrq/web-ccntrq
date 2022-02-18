@@ -1,5 +1,5 @@
 ---
-title: "Challenge 152 Task #2 - Rectangle Area"
+title: "Challenge 152 Task #2 - Untangling the rects"
 ---
 
 ## [Task #2] - Rectangle Area
