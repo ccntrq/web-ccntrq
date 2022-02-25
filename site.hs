@@ -54,7 +54,6 @@ main = hakyllWith config $ do
 
 
     match "pages/**" $ do
-
         route $ customRoute
             (\identifier ->
                 let path = toFilePath identifier
@@ -80,6 +79,7 @@ main = hakyllWith config $ do
         route idRoute
         compile $ do
             makeItem "" >>= loadAndApplyTemplate "templates/robots.txt" hostCtx
+
     match "templates/*" $ compile templateBodyCompiler
 
 hostCtx :: Context String
