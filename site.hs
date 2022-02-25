@@ -17,12 +17,7 @@ host = "https://pankoff.net"
 main :: IO ()
 main = hakyllWith config $ do
     match "img/me.jpg" $ do
-        route $ setExtension ".webp"
-        compile $ imageToWebPCompiler 160 160
-
-    match "img/**" $ do
-        route idRoute
-        compile copyFileCompiler
+        defaultWebPRules 160 160
 
     match "font-awesome/**" $ do
         route idRoute
