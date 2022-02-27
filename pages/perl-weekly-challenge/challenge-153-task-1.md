@@ -40,7 +40,7 @@ For the summing and multiplying of ranges I will use `sum0` and `product` from
 
 For a factorial we generate the range `1 .. $n` and pass it to the imported
 `product` routine. For the left factorials we first generate a list of the
-factorials that we need and sum the up.
+factorials that we need and then sum them up.
 
 ```perl
 sub fac($n) {
