@@ -107,7 +107,7 @@ main = drop 1 leftFactorials & take 10 & print
 
 ### Raku Solution
 
-[Full Source](https://github.com/manwar/perlweeklychallenge-club/blob/master/challenge-153/alexander-pankoff/raku/ch-1.rakue)
+[Full Source](https://github.com/manwar/perlweeklychallenge-club/blob/master/challenge-153/alexander-pankoff/raku/ch-1.raku)
 
 After solving it in Haskell I got curious if I could do the same in raku. There
 are lazy lists/sequences in `raku`, so the only obstacle should be my lack of

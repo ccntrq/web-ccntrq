@@ -1,12 +1,12 @@
 ---
-title: "Challenge 152 Task #2 - Factorions and more factorials"
+title: "Challenge 153 Task #2 - Even more factorials and what the fuck are factorions?"
 ---
 
 ## Task #2 - Factorions
 
 ### Description
 
-[Original Description](https://theweeklychallenge.org/blog/perl-weekly-challenge-152/#TASK2)
+[Original Description](https://theweeklychallenge.org/blog/perl-weekly-challenge-153/#TASK2)
 
 Submitted by: *Mohammad S Anwar*
 
@@ -131,7 +131,7 @@ isFactorion _     = False
 
 ### Raku Solution
 
-[Full Source](https://github.com/manwar/perlweeklychallenge-club/blob/master/challenge-153/alexander-pankoff/raku/ch-2.rakue)
+[Full Source](https://github.com/manwar/perlweeklychallenge-club/blob/master/challenge-153/alexander-pankoff/raku/ch-2.raku)
 
 In `raku` I used a `unit main` to make the whole script the main routine. This
 main routine will also handle command line arguments for us. I use the utf-8
