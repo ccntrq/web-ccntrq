@@ -51,6 +51,7 @@ main = hakyllWith config $ do
                         "templates/perl-weekly-challenge.html"
                         archiveCtx
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext
+                >>= relativizeUrls
 
 
     match "pages/**" $ do
