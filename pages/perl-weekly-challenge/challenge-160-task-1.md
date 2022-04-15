@@ -58,8 +58,8 @@ maximum of three steps to reach `4`. This will actually work for any number -
 there is always fewer characters in a number's cardinal representation than its
 value.
 
-My solution for this challenge takes expects a positive single digit number as
-its first argument.
+My solution for this challenge expects a positive single digit number as its
+first argument.
 
 This number will be passed to a `four_is_magic` routine, which is a tiny wrapper
 around the core logic in `_four_is_magic`. The purpose of this wrapper is to
