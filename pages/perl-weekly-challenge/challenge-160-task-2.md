@@ -41,7 +41,7 @@ Output: 1
 
 ### Solution
 
-[Full Source](https://github.com/manwar/perlweeklychallenge-club/blob/master/challenge-152/alexander-pankoff/perl/ch-2.pl)
+[Full Source](https://github.com/manwar/perlweeklychallenge-club/blob/master/challenge-160/alexander-pankoff/perl/ch-2.pl)
 
 Phrased a little differently, an equilibrium index is an index, where the sum of
 all elements left to it is equal to the sum of all elements to the right of it.
