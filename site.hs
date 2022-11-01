@@ -5,6 +5,9 @@ import           Data.String (IsString)
 import           Hakyll hiding (host)
 import           Hakyll.Web.ImageToWebP
 import           System.FilePath
+import           Control.Monad.IO.Class (MonadIO(liftIO))
+import           Data.List (sortBy)
+import           Data.List.Split (splitOn)
 
 config :: Configuration
 config = defaultConfiguration { deployCommand =
@@ -43,7 +46,12 @@ main = hakyllWith config
             let archiveCtx = listField
                   "challenges"
                   defaultContext
-                  (return (reverse posts)) -- TODO: implement ordering
+                  (return
+                     (sortBy
+                        (\a b -> compareWeeklyChallengePaths
+                           (toFilePath $ itemIdentifier b)
+                           (toFilePath $ itemIdentifier a))
+                        posts)) -- TODO: implement ordering
                   `mappend` constField "title" "Archives"
                   `mappend` defaultContext
             pandocCompiler
@@ -91,3 +99,10 @@ cleanIndexHtmls = return . fmap (replaceAll pattern replacement)
     pattern = "/index.html"
 
     replacement = const "/"
+
+compareWeeklyChallengePaths :: String -> String -> Ordering
+compareWeeklyChallengePaths a b = compare (getChallenge a) (getChallenge b)
+  where
+    getChallenge :: String -> Int
+    getChallenge x =
+      read $ (!! 1) $ splitOn "-" $ head $ splitOn "." (splitOn "/" x !! 2)

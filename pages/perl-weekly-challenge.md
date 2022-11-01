@@ -10,6 +10,3 @@ There is no comment section on this site. If you have any questions, suggestions
 or find an error in my posts or solutions please create an issue in [this
 repository on GitHub](https://github.com/ccntrq/web-ccntrq) or drop me a
 [mail](/pages/contact.html)
-
-**NOTE** Work in progress - not all my submissions have been linked here yet.
- 
