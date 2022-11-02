@@ -2,12 +2,9 @@ module Hakyll.MyMain (myHakyll) where
 
 import           Hakyll.Main hiding (verbosity)
 import qualified Options.Applicative as OA
-import qualified Hakyll.Core.Logger as Logger
-import qualified Hakyll.Commands as Check
 import           Hakyll.Core.Rules
 import           Hakyll.Core.Configuration
 import           Tools.FindWeeklyChallenges (generateNewChallengeFiles)
-import           Hakyll.Core.Runtime
 import           Data.Tuple.Extra (second3)
 
 data MyCommand = HakyllCommand Command

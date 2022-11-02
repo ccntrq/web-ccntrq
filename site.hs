@@ -1,12 +1,10 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-import           Data.Monoid (mappend)
 import           Data.String (IsString)
 import           Hakyll hiding (host)
 import           Hakyll.MyMain
 import           Hakyll.Web.ImageToWebP
 import           System.FilePath
-import           Control.Monad.IO.Class (MonadIO(liftIO))
 import           Data.List (sortBy)
 import           Data.List.Split (splitOn)
 
@@ -81,7 +79,7 @@ main = myHakyll myConfig
           $ do
             pages <- loadAll ("pages/**" .&&. complement "pages/404.md")
             let sitemapCtx = listField "entries" hostCtx (return pages)
-            makeItem ""
+            makeItem ("" :: String)
               >>= loadAndApplyTemplate "templates/sitemap.xml" sitemapCtx
               >>= cleanIndexHtmls
     create ["robots.txt"]
