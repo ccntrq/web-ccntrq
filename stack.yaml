@@ -24,6 +24,8 @@ resolver: lts-19.30
 #
 extra-deps:
 - Unixutils-1.54.1@sha256:c6afbaf6d68ba229d0d262e066376c300f25b798d5752f162476155cadf1114d,1123
+- git: https://github.com/ccntrq/hakyll.git
+  commit: 79001496551bf361e93aff83401025fb9bc3769e
 
 # - some-directory
 # - https://example.com/foo/bar/baz-0.0.2.tar.gz

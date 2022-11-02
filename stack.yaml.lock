@@ -11,6 +11,17 @@ packages:
       size: 721
   original:
     hackage: Unixutils-1.54.1@sha256:c6afbaf6d68ba229d0d262e066376c300f25b798d5752f162476155cadf1114d,1123
+- completed:
+    commit: 79001496551bf361e93aff83401025fb9bc3769e
+    git: https://github.com/ccntrq/hakyll.git
+    name: hakyll
+    pantry-tree:
+      sha256: 3603d9aed7505d538495d1c7d09ed0218cf8b8c3a064a537de11dd5d277caa70
+      size: 12833
+    version: 4.15.1.1
+  original:
+    commit: 79001496551bf361e93aff83401025fb9bc3769e
+    git: https://github.com/ccntrq/hakyll.git
 snapshots:
 - completed:
     sha256: 9a74d76d250a455d9cd11e74f157e087787fa9aa3c4264e69c94703d1e71aede
