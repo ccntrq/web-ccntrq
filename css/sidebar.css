@@ -42,4 +42,5 @@
   height: 2rem;
   -webkit-filter: invert(100%);
   filter: invert(100%);
+  margin-right: 0.2em
 }
