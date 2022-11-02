@@ -51,7 +51,7 @@ main = myHakyll myConfig
                         (\a b -> compareWeeklyChallengePaths
                            (toFilePath $ itemIdentifier b)
                            (toFilePath $ itemIdentifier a))
-                        posts)) -- TODO: implement ordering
+                        posts))
                   `mappend` constField "title" "Archives"
                   `mappend` defaultContext
             pandocCompiler
@@ -101,7 +101,10 @@ cleanIndexHtmls = return . fmap (replaceAll pattern replacement)
     replacement = const "/"
 
 compareWeeklyChallengePaths :: String -> String -> Ordering
-compareWeeklyChallengePaths a b = compare (getChallenge a) (getChallenge b)
+compareWeeklyChallengePaths a b =
+  case compare (getChallenge a) (getChallenge b) of
+    EQ -> compare a b
+    x  -> x
   where
     getChallenge :: String -> Int
     getChallenge x =
