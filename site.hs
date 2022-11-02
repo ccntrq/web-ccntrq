@@ -3,22 +3,24 @@
 import           Data.Monoid (mappend)
 import           Data.String (IsString)
 import           Hakyll hiding (host)
+import           Hakyll.MyMain
 import           Hakyll.Web.ImageToWebP
 import           System.FilePath
 import           Control.Monad.IO.Class (MonadIO(liftIO))
 import           Data.List (sortBy)
 import           Data.List.Split (splitOn)
 
-config :: Configuration
-config = defaultConfiguration { deployCommand =
-                                  "rsync -avzP -e \"ssh\" _site/ apajocnb@www.pankoff.net:www.pankoff.net"
-                              }
+myConfig :: Configuration
+myConfig =
+  defaultConfiguration { deployCommand =
+                           "rsync -avzP -e \"ssh\" _site/ apajocnb@www.pankoff.net:www.pankoff.net"
+                       }
 
 host :: IsString a => a
 host = "https://pankoff.net"
 
 main :: IO ()
-main = hakyllWith config
+main = myHakyll myConfig
   $ do
     match "img/me.jpg" $ defaultWebPRules 160 160
     match "font-awesome/**"

@@ -5,6 +5,7 @@ cabal-version:      >= 1.10
 
 library
   exposed-modules:
+      Hakyll.MyMain
       Hakyll.Web.ImageToWebP
       Tools.FindWeeklyChallenges
 
@@ -14,6 +15,7 @@ library
                   , containers
                   , directory
                   , Glob
+                  , optparse-applicative
                   , process
                   , split
                   , Unixutils
