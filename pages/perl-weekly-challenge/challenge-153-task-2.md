@@ -1,5 +1,5 @@
 ---
-title: "Challenge 153 Task #2 - Even more factorials and what the fuck are factorions?"
+title: "Challenge 153 Task #2 - Even more factorials and what the fac are factorions?"
 ---
 
 ## Task #2 - Factorions
