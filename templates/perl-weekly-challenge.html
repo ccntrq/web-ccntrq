@@ -5,7 +5,7 @@ $body$
 <ul class="perl-weekly-submission-list">
   $for(challenges)$
   <li class="perl-weekly-submission-list-item">
-    <a href="$url$">$title$</a>
+    <a href="$url$">$if(body-title)$ $body-title$ $else$ $title$ $endif$</a>
   </li>
   $endfor$
 </ul>

@@ -1,5 +1,5 @@
-<div class="page-content">
-  <h1>$title$</h1>
+<div class="page-content" $if(lang)$lang=$lang$$endif$>
+  <h1>$if(body-title)$ $body-title$ $else$ $title$ $endif$</h1>
 
   $body$
 </div>
