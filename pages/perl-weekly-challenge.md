@@ -1,8 +1,8 @@
 ---
-title: Perl Weekly Challenge
+title: The Weekly Challenge
 ---
 
-For my personal delight I take part in the [Perl Weekly
+For my personal delight I take part in the [The Weekly
 Challenge](https://theweeklychallenge.org/). Here you can find all my
 submissions, as well as my blog posts about the solutions.
 
