@@ -93,6 +93,7 @@ pre {
   overflow: auto;
   font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
     monospace;
+  margin-bottom: 1rem;
 }
 
 code {
@@ -123,4 +124,9 @@ ol[type="1"] {
   list-style-type: decimal;
   padding-left: 2em;
   margin-bottom: 0.5em;
+}
+
+ul {
+  list-style-type: disc;
+  list-style-position: inside;
 }
