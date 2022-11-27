@@ -60,7 +60,7 @@ main = myHakyll myConfig
                 archiveCtx
               >>= loadAndApplyTemplate "templates/default.html" defaultContext
               >>= relativizeUrls
-    match "pages/**"
+    match "pages/*.md"
       $ do
         route
           $ customRoute
@@ -70,6 +70,19 @@ main = myHakyll myConfig
                                else replaceExtension path "html")
         compile
           $ pandocCompiler
+          >>= loadAndApplyTemplate "templates/default.html" defaultContext
+          >>= relativizeUrls
+    match "pages/perl-weekly-challenge/*.md"
+      $ do
+        route
+          $ customRoute
+            (\identifier -> let path = toFilePath identifier
+                            in if path == "pages/about-me.md"
+                               then "index.html"
+                               else replaceExtension path "html")
+        compile
+          $ pandocCompiler
+          >>= loadAndApplyTemplate "templates/perl-weekly-challenge-post.html" defaultContext
           >>= loadAndApplyTemplate "templates/default.html" defaultContext
           >>= relativizeUrls
     create ["sitemap.xml"]
