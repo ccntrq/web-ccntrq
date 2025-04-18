@@ -12,8 +12,8 @@ title: About me
   >
 </div>
 
-I'm a software developer, open source enthusiast and Linux Nerd located in
-Hannover, Germany. Most of my open source work is done as `ccntrq`.
+I'm a software developer, open source enthusiast and Linux Nerd located in the
+northern Ruhrgebiet, Germany. Most of my open source work is done as `ccntrq`.
 
 I work as a fullstack web developer, but my interest for software development
 and programming languages goes way beyond that.
