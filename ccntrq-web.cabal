@@ -10,7 +10,7 @@ library
       Tools.FindWeeklyChallenges
 
   build-depends:    base == 4.*
-                  , hakyll == 4.15.*
+                  , hakyll == 4.16.*
                   , bytestring
                   , containers
                   , directory
@@ -27,7 +27,7 @@ library
 executable site
   main-is:          site.hs
   build-depends:    base == 4.*
-                  , hakyll == 4.15.*
+                  , hakyll == 4.16.*
                   , ccntrq-web
                   , bytestring
                   , filepath
